@@ -1,0 +1,114 @@
+:root {
+    --primary-color: #00b7af;
+    --bg-color: #10181f;
+    --text-color: #ffffff;
+    --secondary-color: #6a7071;
+    --button-bg: #1a262f;
+    --button-hover: #253440;
+    --operator-color: #00b7af;
+    --equal-btn: #00b7af;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: var(--text-color);
+}
+
+.calculator-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+}
+
+.calculator {
+    background-color: #0d141a;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border: 1px solid #222;
+}
+
+.display {
+    padding: 30px 20px;
+    background-color: #0a0f14;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    min-height: 120px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.previous-operand {
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+    min-height: 1.5rem;
+}
+
+.current-operand {
+    color: var(--text-color);
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background-color: #222;
+}
+
+button {
+    border: none;
+    outline: none;
+    background-color: var(--button-bg);
+    color: var(--text-color);
+    font-size: 1.5rem;
+    padding: 20px 0;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: var(--button-hover);
+}
+
+button:active {
+    background-color: #30414f;
+}
+
+.span-two {
+    grid-column: span 2;
+}
+
+.operator {
+    color: var(--operator-color);
+    font-weight: bold;
+}
+
+.control {
+    color: #ff5555;
+    font-weight: bold;
+}
+
+.equals {
+    background-color: var(--equal-btn);
+    color: #10181f;
+    font-weight: bold;
+}
+
+.equals:hover {
+    background-color: #00d4cc;
+}
